@@ -18,8 +18,16 @@ function t3(x, f) {
   return Curry._3(f, x, 1, 2);
 }
 
+function f(a, b, c) {
+  return /* tuple */[
+          Curry._1(b, a),
+          Curry._1(c, a)
+        ];
+}
+
 exports.t0 = t0;
 exports.t1 = t1;
 exports.t2 = t2;
 exports.t3 = t3;
+exports.f = f;
 /* No side effect */
